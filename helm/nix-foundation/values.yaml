@@ -1,11 +1,11 @@
-# Default values for nix-foundation.
+# Default values for mischasgressernetworks.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: alannix/nix-foundation
+  repository: mgresser/mischasgressernetworks
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: latest

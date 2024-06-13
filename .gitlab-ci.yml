@@ -7,9 +7,9 @@ variables:
   CONTAINER_RELEASE_IMAGE: $CI_REGISTRY_IMAGE:latest
   DOCKER_HOST: tcp://docker:2376
   DOCKER_TLS_CERTDIR: "/certs"
-  WIZ_IAC_POLICY: "nixlab-iac-audit"
-  WIZ_SECRETS_POLICY: "nixlab-secrets"
-  WIZ_VULN_POLICY: "nixlab-vuln-audit"
+  WIZ_IAC_POLICY: "mischalab-iac-audit"
+  WIZ_SECRETS_POLICY: "mischalab-secrets"
+  WIZ_VULN_POLICY: "mischalab-vuln-audit"
 
 default:
   before_script:

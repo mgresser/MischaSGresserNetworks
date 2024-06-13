@@ -1,7 +1,7 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "nix-foundation.name" -}}
+{{- define "mischasgressernetworks.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
@@ -10,7 +10,7 @@ Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a full name.
 */}}
-{{- define "nix-foundation.fullname" -}}
+{{- define "mischasgressernetworks.fullname" -}}
 {{- if .Values.fullnameOverride }}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -26,16 +26,16 @@ If release name contains chart name it will be used as a full name.
 {{/*
 Create chart name and version as used by the chart label.
 */}}
-{{- define "nix-foundation.chart" -}}
+{{- define "mischasgressernetworks.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{/*
 Common labels
 */}}
-{{- define "nix-foundation.labels" -}}
-helm.sh/chart: {{ include "nix-foundation.chart" . }}
-{{ include "nix-foundation.selectorLabels" . }}
+{{- define "mischasgressernetworks.labels" -}}
+helm.sh/chart: {{ include "mischasgressernetworks.chart" . }}
+{{ include "mischasgressernetworks.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
@@ -45,17 +45,17 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{/*
 Selector labels
 */}}
-{{- define "nix-foundation.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "nix-foundation.name" . }}
+{{- define "mischasgressernetworks.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "mischasgressernetworks.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
 Create the name of the service account to use
 */}}
-{{- define "nix-foundation.serviceAccountName" -}}
+{{- define "mischasgressernetworks.serviceAccountName" -}}
 {{- if .Values.serviceAccount.create }}
-{{- default (include "nix-foundation.fullname" .) .Values.serviceAccount.name }}
+{{- default (include "mischasgressernetworks.fullname" .) .Values.serviceAccount.name }}
 {{- else }}
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}

@@ -2,9 +2,8 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
-      Honoring the lifelong goal of Carolyn "Lynn" Nix in which every one of us
-      can read and write,<br />
-      and there is free access to education for all.
+      Looking to network with likeminded cloud security professionals,<br />
+      connect with me today!
     </p>
     <h3>Essential Links</h3>
     <ul>
@@ -21,6 +20,8 @@
         <a href="#" rel="noopener">News</a>
       </li>
       <li>
+        <a href="https://www.linkedin.com/in/mischagresser/" target="_blank" rel="noopener">My LinkedIn</a>
+        <a href="https://www.cloudsecurityofficehours.com/" target="_blank" rel="noopener">Cloud Security Office Hours</a>
         <a href="https://twitter.com/wiz_io" target="_blank" rel="noopener">Twitter</a>
       </li>
     </ul>
@@ -29,7 +30,7 @@
 
 <script>
 export default {
-  name: "NixFoundation",
+  name: "MischaSGresserNetworks",
   props: {
     msg: String,
   },

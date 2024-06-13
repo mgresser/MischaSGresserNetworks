@@ -1,15 +1,15 @@
 <template>
   <img id="portrait" alt="Portrait" src="./assets/portrait.jpg" />
-  <NixFoundation msg="Welcome to the Lynn Nix Foundation" />
+  <MischaSGresserNetworks msg="Welcome to the Lynn Nix Foundation" />
 </template>
 
 <script>
-import NixFoundation from "./components/NixFoundation.vue";
+import MischaSGresserNetworks from "./components/MischaSGresserNetworks.vue";
 
 export default {
   name: "App",
   components: {
-    NixFoundation,
+    MischaSGresserNetworks,
   },
 };
 </script>
