@@ -6,22 +6,14 @@
       connect with me today!
     </p>
     <h3>Essential Links</h3>
-    <ul>
-      <li>
-        <a href="#" rel="noopener">See How</a>
-      </li>
-      <li>
-        <a href="#" rel="noopener">Support Us</a>
-      </li>
-      <li>
-        <a href="#" rel="noopener">Forum</a>
-      </li>
-      <li>
-        <a href="#" rel="noopener">News</a>
-      </li>
+    <ul
       <li>
         <a href="https://www.linkedin.com/in/mischagresser/" target="_blank" rel="noopener">My LinkedIn</a>
+      </li>
+      <li>
         <a href="https://www.cloudsecurityofficehours.com/" target="_blank" rel="noopener">Cloud Security Office Hours</a>
+      </li>
+      <li>
         <a href="https://twitter.com/wiz_io" target="_blank" rel="noopener">Twitter</a>
       </li>
     </ul>
