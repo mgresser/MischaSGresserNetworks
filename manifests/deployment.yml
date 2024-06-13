@@ -14,7 +14,7 @@ spec:
         app: mischasgressernetworks-www
     spec:
       containers:
-      - image: mgresser/mischasgressernetworks:latest
+      - image: mgresser1981/mischasgressernetworks:latest
         name: mischasgressernetworks-www
         ports:
         - containerPort: 8080
