@@ -6,7 +6,7 @@
       connect with me today!
     </p>
     <h3>Essential Links</h3>
-    <ul
+    <ul>
       <li>
         <a href="https://www.linkedin.com/in/mischagresser/" target="_blank" rel="noopener">My LinkedIn</a>
       </li>
