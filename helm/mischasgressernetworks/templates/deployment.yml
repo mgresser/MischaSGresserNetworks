@@ -19,3 +19,12 @@ spec:
         name: {{ include "mischasgressernetworks.name" . }}-www
         ports:
         - containerPort: 8080
+        securityContext:
+          readOnlyRootFilesystem: true
+          allowPrivilegeEscalation: false
+          runAsNonRoot: true
+          privileged: false
+          capabilities:
+            drop:
+              - ALL
+            add: ["NET_ADMIN", "SYS_TIME"]
