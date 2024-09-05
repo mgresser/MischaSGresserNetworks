@@ -1,19 +1,5 @@
 FROM node:14.21-alpine
 
-ARG USER=mgresser
-ENV HOME /home/$USER
-
-# install sudo as root
-RUN apk add --update sudo
-
-# add new user
-RUN adduser -D $USER \
-        && echo "$USER ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$USER \
-        && chmod 0440 /etc/sudoers.d/$USER
-
-USER $USER
-WORKDIR $HOME
-
 # install simple http server for serving static content
 RUN npm install -g http-server
 
@@ -35,6 +21,20 @@ COPY ./src ./src
 
 # build app for production with minification
 RUN npm run build
+
+ARG USER=mgresser
+ENV HOME /home/$USER
+
+# install sudo as root
+RUN apk add --update sudo
+
+# add new user
+RUN adduser -D $USER \
+        && echo "$USER ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$USER \
+        && chmod 0440 /etc/sudoers.d/$USER
+
+USER $USER
+WORKDIR $HOME
 
 EXPOSE 8080
 CMD [ "http-server", "dist" ]
