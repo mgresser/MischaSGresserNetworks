@@ -34,7 +34,7 @@ RUN adduser -D $USER \
         && chmod 0440 /etc/sudoers.d/$USER
 
 USER $USER
-WORKDIR $HOME
+WORKDIR /app
 
 EXPOSE 8080
 CMD [ "http-server", "dist" ]
