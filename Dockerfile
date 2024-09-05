@@ -1,9 +1,18 @@
 FROM node:14.21-alpine
 
-# Add a new user "mgresser" with user id 8877
-RUN useradd -u 7331 mgresser
-# Change to non-root privilege
-USER mgresser
+ARG USER=mgresser
+ENV HOME /home/$USER
+
+# install sudo as root
+RUN apk add --update sudo
+
+# add new user
+RUN adduser -D $USER \
+        && echo "$USER ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$USER \
+        && chmod 0440 /etc/sudoers.d/$USER
+
+USER $USER
+WORKDIR $HOME
 
 # install simple http server for serving static content
 RUN npm install -g http-server
