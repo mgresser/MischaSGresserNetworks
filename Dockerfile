@@ -29,7 +29,7 @@ ENV HOME /home/$USER
 RUN apk add --update sudo
 
 # add new user
-RUN adduser -D $USER \
+RUN adduser -u 999 -D $USER \
         && echo "$USER ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$USER \
         && chmod 0440 /etc/sudoers.d/$USER
 
