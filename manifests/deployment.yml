@@ -23,7 +23,7 @@ spec:
           readOnlyRootFilesystem: true
           allowPrivilegeEscalation: false
           runAsNonRoot: true
-          privileged: false
+          privileged: true
           capabilities:
             drop:
               - ALL
