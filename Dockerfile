@@ -1,5 +1,10 @@
 FROM node:14.21-alpine
 
+# Add a new user "mgresser" with user id 8877
+RUN useradd -u 7331 mgresser
+# Change to non-root privilege
+USER mgresser
+
 # install simple http server for serving static content
 RUN npm install -g http-server
 
