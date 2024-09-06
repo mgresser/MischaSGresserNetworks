@@ -1,9 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>   
     <h2>Welcome to Mischa S Gresser's Networking Website!</h2>
-    </p>
     <p>
       I'm looking to network with likeminded cloud security professionals,<br />
       connect with me today!
