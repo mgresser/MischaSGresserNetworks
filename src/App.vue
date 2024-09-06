@@ -1,6 +1,6 @@
 <template>
   <img id="portrait" alt="Portrait" src="./assets/portrait.jpg" />
-  <MischaSGresserNetworks msg="Welcome to MSG Networks Website" />
+  <MischaSGresserNetworks msg="MSG Networks" />
 </template>
 
 <script>
